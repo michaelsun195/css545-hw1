@@ -2,15 +2,18 @@
     https://docs.expo.dev/tutorial/create-your-first-app/ and
     https://docs.expo.dev/tutorial/add-navigation/ with some slight modifications. */}
 
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Pressable } from "react-native";
 import { Link } from 'expo-router';
 
 export default function Index() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Hello world</Text>
-            <Link href='/pagetwo' style={styles.button}>
-                Go to the second page
+            <Text style={styles.text}></Text>
+            <Link href='/pagetwo' style={styles.button} asChild>
+                <Pressable>
+                    <Text style={styles.realbutton}>  Go to the second page  </Text>
+                </Pressable>
             </Link>
         </View>
     );
@@ -29,6 +32,11 @@ const styles = StyleSheet.create({
     button: {
         fontSize: 20,
         textDecorationLine: 'underline',
+        color: '#fff',
+        margin: 20,
+    },
+    realbutton: {
+        backgroundColor: '#04aa6d',
         color: '#fff',
     },
 });
