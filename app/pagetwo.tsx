@@ -8,6 +8,8 @@ export default function AboutScreen() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>This is the second page!</Text>
+            <Text style={styles.text}></Text>
+            <Text style={styles.text2}>Press the home link in the top left to return to the previous page.</Text>
         </View>
     );
 }
@@ -21,5 +23,9 @@ const styles = StyleSheet.create({
     },
     text: {
         color: '#fff',
+    },
+    text2: {
+        color: '#fff',
+        width: 300,
     },
 });
